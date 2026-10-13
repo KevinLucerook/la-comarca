@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Comarca Impresiones | Impresión 3D en Córdoba</title>
+    <meta
+      name="description"
+      content="La Comarca Impresiones: taller de impresión 3D en Córdoba. Figuras, llaveros, juguetes y piezas a medida. Pedidos por Instagram."
+    />
+    <meta name="theme-color" content="#3f2918" />
+    <meta property="og:title" content="La Comarca Impresiones" />
+    <meta
+      property="og:description"
+      content="Impresión 3D a medida en Córdoba. Una puerta redonda, colinas verdes y encargos hechos de a uno."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bilbo&family=IM+Fell+English:ital@0;1&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "La Comarca Impresiones",
+        "description": "Taller de impresión 3D a medida en Córdoba, Argentina.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Córdoba",
+          "addressCountry": "AR"
+        },
+        "sameAs": [
+          "https://www.instagram.com/lacomarca.impresiones/",
+          "https://www.tiktok.com/@lacomarca.impresiones"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#inicio">
+          <img src="assets/logo.png" alt="" width="46" height="46" />
+          <span>
+            <strong>La Comarca</strong>
+            <small>Impresiones</small>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principal">
+          <span class="menu-bars" aria-hidden="true"></span>
+          <span class="menu-label">Menú</span>
+        </button>
+        <nav id="nav-principal" class="site-nav" aria-label="Principal">
+          <a href="#taller">El taller</a>
+          <a href="#piezas">Las piezas</a>
+          <a href="#sendero">El sendero</a>
+          <a href="#posada">La posada</a>
+          <a class="nav-cta" href="https://ig.me/m/lacomarca.impresiones" target="_blank" rel="noopener">Pedir por Instagram</a>
+        </nav>
+      </div>
+      <div class="sendero-luz" aria-hidden="true">
+        <span id="sendero-lleno"></span>
+        <span id="sendero-mote"></span>
+      </div>
+    </header>
+
+    <div class="camino" aria-hidden="true">
+      <svg viewBox="0 0 80 1000" preserveAspectRatio="none">
+        <path id="camino-trazo" pathLength="1" d="M42 0 C 12 150, 70 210, 40 340 S 8 530, 50 690 S 76 860, 30 1000" />
+      </svg>
+    </div>
+
+    <main id="contenido">
+      <section id="inicio" class="hero">
+        <canvas class="luciernagas" id="luciernagas" aria-hidden="true"></canvas>
+        <div class="nubes" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="rayos" aria-hidden="true"></div>
+        <div class="linterna" id="linterna" aria-hidden="true"></div>
+        <div class="hero-layout">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Córdoba · un valle de impresión 3D</p>
+            <h1>Bienvenidos a La Comarca</h1>
+            <p class="lede">
+              Hay una puerta redonda al final del camino verde. Del otro lado se
+              imprimen figuras, llaveros, juguetes y piezas a medida, con la
+              calma de quien trabaja en la ladera.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="https://ig.me/m/lacomarca.impresiones" target="_blank" rel="noopener">Escribinos por Instagram</a>
+              <a class="button button-ghost" href="#piezas">Ver las piezas</a>
+            </div>
+          </div>
+          <div class="hero-mark reveal">
+            <span class="halo" aria-hidden="true"></span>
+            <span class="orbit" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <img src="assets/logo.png" alt="Puerta redonda de La Comarca Impresiones" width="1600" height="1600" fetchpriority="high" />
+          </div>
+        </div>
+        <div class="bruma" aria-hidden="true"></div>
+        <div class="brillo-colina" aria-hidden="true"></div>
+        <svg class="hills" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="colina-lejana" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#d7efb8" />
+              <stop offset="100%" stop-color="#c6e7a4" />
+            </linearGradient>
+            <linearGradient id="colina-media" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#9ccc78" />
+              <stop offset="100%" stop-color="#c6e7a4" />
+            </linearGradient>
+            <linearGradient id="colina-cerca" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#7eb85f" />
+              <stop offset="55%" stop-color="#a9d48a" />
+              <stop offset="100%" stop-color="#c6e7a4" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#colina-lejana)" d="M0 96C200 36 360 128 560 74C780 12 920 118 1140 62C1280 28 1360 96 1440 52V180H0Z" />
+          <path fill="url(#colina-media)" d="M0 110C180 50 300 150 480 96C680 36 790 140 1000 86C1180 42 1320 108 1440 64V180H0Z" />
+          <path fill="url(#colina-cerca)" d="M0 146C200 104 340 168 540 128C760 82 920 158 1140 118C1280 92 1360 132 1440 108V180H0Z" />
+        </svg>
+      </section>
+
+      <section class="atlas" aria-label="Mapa del valle">
+        <div class="section-inner">
+          <p class="atlas-lead">El mapa del valle</p>
+          <ol class="places reveal-group">
+            <li>
+              <span class="place-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" fill="#2f7a3c" stroke="#8d4e28" stroke-width="4"/><circle cx="31" cy="25" r="2.2" fill="#f2c14e"/></svg>
+              </span>
+              <h2>La puerta</h2>
+              <p>Por acá entra cada idea, antes de convertirse en objeto.</p>
+            </li>
+            <li>
+              <span class="place-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M10 30V18l14-8 14 8v12" fill="none" stroke="#f6f0e4" stroke-width="2.4"/><circle cx="24" cy="26" r="3" fill="#f2c14e"/></svg>
+              </span>
+              <h2>El taller</h2>
+              <p>Donde la pieza toma forma, color y tamaño.</p>
+            </li>
+            <li>
+              <span class="place-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><rect x="12" y="18" width="24" height="14" rx="2" fill="none" stroke="#f6f0e4" stroke-width="2.4"/><path d="M16 18v-4h16v4" fill="none" stroke="#f6f0e4" stroke-width="2.4"/></svg>
+              </span>
+              <h2>El mercado</h2>
+              <p>Ferias, regalos, merch y encargos para una marca.</p>
+            </li>
+            <li>
+              <span class="place-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M8 32c8-12 12-4 16-10s8 2 16-8" fill="none" stroke="#f2c14e" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </span>
+              <h2>El sendero</h2>
+              <p>Del mensaje directo hasta la pieza terminada.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="taller" class="section">
+        <div class="section-inner">
+          <article class="manuscript reveal">
+            <p class="eyebrow">El taller</p>
+            <h2>Una casa en la ladera</h2>
+            <p>
+              La Comarca es un taller de impresión 3D en Córdoba. El nombre es el
+              de un valle: colinas verdes, un sendero y una puerta redonda. Ahí
+              se encargan figuras, souvenirs, juguetes y objetos útiles que
+              todavía no están en ningún estante.
+            </p>
+            <p>
+              No hay catálogo cerrado. Cada trabajo se conversa por mensaje
+              directo y sale hecho para esa persona, esa fiesta o esa marca.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="piezas" class="section section-green">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Las piezas</p>
+            <h2>Lo que ya salió del valle</h2>
+            <p>
+              Una muestra del taller. En Instagram está el camino completo, con
+              el color y el tamaño de cada encargo.
+            </p>
+          </div>
+          <ul class="gallery reveal-group">
+            <li>
+              <figure>
+                <img src="assets/fotos/miniaturas.jpg" alt="Biblioteca en miniatura y contador de libros leídos, impresos en 3D" width="1152" height="1280" loading="lazy" />
+                <figcaption>
+                  <h3>Miniaturas</h3>
+                  <p>Escenas chicas, muebles y piezas para decorar un rincón.</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="assets/fotos/juguetes.jpg" alt="Caja de juguetes articulados de colores, impresos en 3D" width="722" height="1280" loading="lazy" />
+                <figcaption>
+                  <h3>Juguetes articulados</h3>
+                  <p>Animalitos y figuras flexibles para jugar o coleccionar.</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="assets/fotos/llaveros.jpg" alt="Llavero de mariposa impreso en 3D, listo para regalar" width="960" height="1280" loading="lazy" />
+                <figcaption>
+                  <h3>Llaveros y souvenirs</h3>
+                  <p>Regalos chicos para fiestas, ferias y recuerdos.</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="assets/fotos/figuras.jpg" alt="Figura personalizada impresa en 3D, con sillas en miniatura" width="1136" height="1280" loading="lazy" />
+                <figcaption>
+                  <h3>Figuras a medida</h3>
+                  <p>Personajes y escenas pensadas para un encargo puntual.</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="assets/fotos/numeros.jpg" alt="Tablero didáctico con fichas de números, impreso en 3D" width="720" height="1280" loading="lazy" />
+                <figcaption>
+                  <h3>Piezas didácticas</h3>
+                  <p>Juegos y objetos para aprender, mirar y usar las manos.</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="assets/fotos/marcas.jpg" alt="Soportes rojos impresos en 3D con el logo de un cliente" width="1280" height="1280" loading="lazy" />
+                <figcaption>
+                  <h3>Piezas con logo</h3>
+                  <p>Soportes, merch y objetos con la identidad de una marca.</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+          <p class="section-note">
+            <a href="https://www.instagram.com/lacomarca.impresiones/" target="_blank" rel="noopener">Seguir el sendero en Instagram</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="sendero" class="section">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">El sendero</p>
+            <h2>Cuatro pasos hasta la puerta</h2>
+          </div>
+          <ol class="steps reveal-group">
+            <li>
+              <h3>La idea</h3>
+              <p>Contanos qué hay que imprimir. Si hay una foto o un dibujo, mejor.</p>
+            </li>
+            <li>
+              <h3>El acuerdo</h3>
+              <p>Se definen tamaño, colores y cantidad para que la pieza quede como se imaginó.</p>
+            </li>
+            <li>
+              <h3>El presupuesto</h3>
+              <p>Cada trabajo se cotiza aparte. No hay un precio único publicado.</p>
+            </li>
+            <li>
+              <h3>La entrega</h3>
+              <p>Cuando está lista, se coordina por el mismo chat cómo llega a destino.</p>
+            </li>
+          </ol>
+
+          <form class="order reveal" id="form-pedido">
+            <h3>Dejá el encargo escrito</h3>
+            <p>El texto se copia y se abre Instagram para pegarlo en el chat.</p>
+            <div class="fields">
+              <label>
+                Nombre
+                <input name="nombre" type="text" autocomplete="name" maxlength="80" />
+              </label>
+              <label>
+                Cantidad
+                <input name="cantidad" type="text" inputmode="numeric" maxlength="20" placeholder="1" />
+              </label>
+              <label class="full">
+                Qué hay que imprimir
+                <input name="idea" type="text" required maxlength="160" placeholder="Un llavero, una figura, un soporte..." />
+              </label>
+              <label class="full">
+                Colores y detalles
+                <textarea name="detalles" rows="4" maxlength="500" placeholder="Medidas, colores, si es un regalo, para qué evento..."></textarea>
+              </label>
+            </div>
+            <button class="button" type="submit">Copiar mensaje y abrir Instagram</button>
+            <p class="form-status" id="form-status" role="status"></p>
+            <textarea class="message-preview" id="message-preview" hidden readonly></textarea>
+          </form>
+        </div>
+      </section>
+
+      <div class="anochecer" aria-hidden="true"></div>
+
+      <section id="posada" class="section section-wood">
+        <canvas class="luciernagas" id="luciernagas-noche" aria-hidden="true"></canvas>
+        <div class="niebla" aria-hidden="true"></div>
+        <div class="luna" aria-hidden="true"></div>
+        <span class="estrella-fugaz" aria-hidden="true"></span>
+        <div class="section-inner contact-layout">
+          <div>
+            <p class="eyebrow eyebrow-light">La posada</p>
+            <h2>La puerta sigue abierta</h2>
+            <p>
+              Los encargos entran por mensaje directo. Si preferís mirar el
+              camino antes de escribir, el perfil tiene el trabajo reciente.
+            </p>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <span>Instagram</span>
+              <a href="https://www.instagram.com/lacomarca.impresiones/" target="_blank" rel="noopener">@lacomarca.impresiones</a>
+            </li>
+            <li>
+              <span>TikTok</span>
+              <a href="https://www.tiktok.com/@lacomarca.impresiones" target="_blank" rel="noopener">@lacomarca.impresiones</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="assets/logo.png" alt="" width="1600" height="1600" />
+        <p>La Comarca Impresiones · Córdoba</p>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

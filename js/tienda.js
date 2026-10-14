@@ -220,7 +220,14 @@ pedidoLineas.addEventListener("click", (evento) => {
   pintarPedido();
 });
 
-pedidoNota.addEventListener("input", guardarPedido);
+pedidoNota.addEventListener("input", () => {
+  guardarPedido();
+  if (pedidoMensaje && !pedidoMensaje.hidden) {
+    pedidoMensaje.hidden = true;
+    pedidoMensaje.value = "";
+    if (estado) estado.textContent = "El pedido cambió. Volvé a tocar Pedir por Instagram.";
+  }
+});
 
 enviarPedido.addEventListener("click", async () => {
   if (!lineasDelPedido().length) return;

@@ -28,6 +28,10 @@ if (form) form.addEventListener("submit", async (event) => {
   const data = new FormData(form);
   const nombre = String(data.get("nombre") || "").trim();
   const idea = String(data.get("idea") || "").trim();
+  if (!idea) {
+    status.textContent = "Contanos qué hay que imprimir.";
+    return;
+  }
   const cantidad = String(data.get("cantidad") || "").trim();
   const detalles = String(data.get("detalles") || "").trim();
 

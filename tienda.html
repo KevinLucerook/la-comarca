@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La tienda | La Comarca Impresiones</title>
+    <meta
+      name="description"
+      content="Tienda de La Comarca Impresiones: piezas con precio. Los encargos se piden por Instagram."
+    />
+    <meta name="theme-color" content="#3f2918" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bilbo&family=IM+Fell+English:ital@0;1&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="" width="46" height="46" />
+          <span>
+            <strong>La Comarca</strong>
+            <small>Impresiones</small>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principal">
+          <span class="menu-bars" aria-hidden="true"></span>
+          <span class="menu-label">Menú</span>
+        </button>
+        <nav id="nav-principal" class="site-nav" aria-label="Principal">
+          <a href="index.html#taller">El taller</a>
+          <a href="index.html#piezas">Las piezas</a>
+          <a href="tienda.html" aria-current="page">La tienda</a>
+          <a href="index.html#sendero">El sendero</a>
+          <a href="index.html#posada">La posada</a>
+          <a class="nav-cta" href="https://ig.me/m/lacomarca.impresiones" target="_blank" rel="noopener">Pedir por Instagram</a>
+        </nav>
+      </div>
+      <div class="sendero-luz" aria-hidden="true">
+        <span id="sendero-lleno"></span>
+        <span id="sendero-mote"></span>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section id="tienda" class="section pagina-tienda">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">La tienda</p>
+            <h2>Piezas con precio</h2>
+            <p>Elegí las piezas y la cantidad. El pedido se arma acá y se envía por Instagram.</p>
+          </div>
+          <div id="estante" class="estante" aria-live="polite">
+            <p class="tienda-espera">El mostrador se está acomodando.</p>
+          </div>
+          <div class="balda" aria-hidden="true"></div>
+          <section id="pedido" class="pedido" hidden>
+            <h3>Tu pedido</h3>
+            <ul id="pedido-lineas"></ul>
+            <p class="pedido-vacio" id="pedido-vacio">Todavía no elegiste piezas.</p>
+            <label>
+              Nota para el taller
+              <textarea id="pedido-nota" maxlength="240" placeholder="Colores, tamaño o para qué fecha lo necesitás"></textarea>
+            </label>
+            <p class="pedido-total" id="pedido-total"></p>
+            <button class="button" id="enviar-pedido" type="button" disabled>Pedir por Instagram</button>
+            <p class="form-status" id="tienda-estado" role="status"></p>
+            <textarea class="message-preview" id="pedido-mensaje" hidden readonly></textarea>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div class="pedido-fijo" id="pedido-fijo" hidden>
+      <span id="pedido-fijo-texto"></span>
+      <a href="#pedido">Ver pedido</a>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="assets/logo.png" alt="" width="1600" height="1600" />
+        <p>La Comarca Impresiones · Córdoba</p>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/tienda.js"></script>
+  </body>
+</html>

@@ -23,7 +23,7 @@ const form = document.querySelector("#form-pedido");
 const status = document.querySelector("#form-status");
 const preview = document.querySelector("#message-preview");
 
-form.addEventListener("submit", async (event) => {
+if (form) form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const data = new FormData(form);
   const nombre = String(data.get("nombre") || "").trim();
@@ -192,7 +192,7 @@ function sowPolen(root, count) {
   root.appendChild(field);
 }
 
-document.querySelectorAll("#taller, .atlas, #piezas, #sendero, .anochecer").forEach((section) => {
+document.querySelectorAll("#taller, .atlas, #piezas, #tienda, #sendero, .anochecer").forEach((section) => {
   sowPolen(section, 16);
 });
 
@@ -226,6 +226,11 @@ paintFondo(document.querySelector("#piezas"), [
   "rgba(226, 112, 72, 0.24)",
   "rgba(110, 176, 214, 0.26)",
   "rgba(226, 179, 64, 0.3)",
+]);
+paintFondo(document.querySelector("#tienda"), [
+  "rgba(226, 179, 64, 0.38)",
+  "rgba(138, 90, 50, 0.2)",
+  "rgba(255, 236, 196, 0.42)",
 ]);
 paintFondo(document.querySelector("#sendero"), [
   "rgba(184, 116, 42, 0.26)",

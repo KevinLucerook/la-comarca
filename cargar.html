@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cargar productos | La Comarca Impresiones</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#3f2918" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bilbo&family=IM+Fell+English:ital@0;1&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="tienda.html">
+          <img src="assets/logo.png" alt="" width="46" height="46" />
+          <span>
+            <strong>La Comarca</strong>
+            <small>Impresiones</small>
+          </span>
+        </a>
+        <a class="nav-cta" href="tienda.html">Ver como cliente</a>
+      </div>
+    </header>
+
+    <main class="section mostrador">
+      <div class="section-inner">
+        <p class="uso-interno">Uso interno del taller. Acá se cambian los precios. Quien compra no entra a esta página.</p>
+        <p class="eyebrow">El mostrador</p>
+        <h2 id="clave-titulo">Clave del mostrador</h2>
+        <form class="order" id="form-clave">
+          <p class="mostrador-aviso" id="clave-ayuda">
+            Esta entrada no está en la tienda. Solo quien tiene la clave puede cargar precios.
+          </p>
+          <label>
+            Clave
+            <input name="clave" type="password" required minlength="4" maxlength="40" autocomplete="current-password" />
+          </label>
+          <button class="button" id="entrar-clave" type="submit">Entrar</button>
+          <p class="form-status" id="clave-estado" role="status"></p>
+        </form>
+
+        <div id="zona-productos" hidden>
+        <h2>Cargar una pieza</h2>
+        <p class="mostrador-aviso">
+          Nombre y precio alcanzan. La foto y la nota son opcionales. Lo que se
+          guarda entra en la tienda. El público solo ve el listado.
+        </p>
+
+        <form class="order" id="form-producto">
+          <input id="producto-id" type="hidden" />
+          <div class="fields">
+            <label>
+              Nombre
+              <input name="nombre" type="text" required maxlength="80" autocomplete="off" placeholder="Llavero de mariposa" />
+            </label>
+            <label>
+              Precio
+              <input name="precio" type="text" inputmode="decimal" required maxlength="16" autocomplete="off" placeholder="1500" />
+            </label>
+            <label class="full">
+              Nota
+              <input name="nota" type="text" maxlength="240" autocomplete="off" placeholder="Color, tamaño o para qué sirve" />
+            </label>
+            <label class="full">
+              Foto
+              <input name="foto" type="file" accept="image/jpeg,image/png,image/webp" />
+            </label>
+          </div>
+          <button class="button" id="guardar-producto" type="submit">Guardar en el estante</button>
+          <button class="button button-ghost" id="cancelar-edicion" type="button" hidden>Cancelar</button>
+          <p class="form-status" id="cargar-estado" role="status"></p>
+        </form>
+
+        <h2>Piezas cargadas</h2>
+        <div class="lista-cargada" id="lista-productos" aria-live="polite">
+          <p class="tienda-espera">Buscando el estante.</p>
+        </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/cargar.js"></script>
+  </body>
+</html>

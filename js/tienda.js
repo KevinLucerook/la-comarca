@@ -164,6 +164,11 @@ function pintarPedido() {
     )
     .join("");
   if (lineas.length) pedidoTotal.textContent = `Total publicado: ${mostrarPrecio(total)}`;
+  if (pedidoMensaje) {
+    pedidoMensaje.hidden = true;
+    pedidoMensaje.value = "";
+  }
+  if (estado) estado.textContent = "";
   if (pedidoFijo) {
     pedidoFijo.hidden = lineas.length === 0;
     if (pedidoFijoTexto) {

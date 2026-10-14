@@ -206,6 +206,11 @@ section[id] {
   font-weight: 650;
 }
 
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .button:hover,
 .nav-cta:hover {
   background: #f0c85d;

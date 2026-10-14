@@ -137,6 +137,16 @@ function textoPedido() {
     .join("\n");
 }
 
+function habiaMensaje() {
+  return Boolean(pedidoMensaje && !pedidoMensaje.hidden);
+}
+
+function avisarSiCambio(previo) {
+  if (previo && pedido.size && estado) {
+    estado.textContent = "El pedido cambió. Volvé a tocar Pedir por Instagram.";
+  }
+}
+
 function pintarPedido() {
   const lineas = lineasDelPedido();
   const total = lineas.reduce((suma, linea) => suma + linea.subtotal, 0);
@@ -189,13 +199,14 @@ estante.addEventListener("click", (evento) => {
     entrada.value = String(limitarCantidad(Number(entrada.value) + 1));
   }
   if (evento.target.matches("[data-sumar]")) {
+    const previo = habiaMensaje();
     const id = tarjeta.dataset.id;
     const suma = (pedido.get(id) || 0) + cantidadDeTarjeta(tarjeta);
     pedido.set(id, limitarCantidad(suma));
     guardarPedido();
     pintarPedido();
     pedidoPanel.hidden = false;
-    if (estado) estado.textContent = "La pieza entró al pedido.";
+    if (estado) estado.textContent = previo ? "El pedido cambió. Volvé a tocar Pedir por Instagram." : "La pieza entró al pedido.";
   }
 });
 
@@ -209,6 +220,7 @@ pedidoLineas.addEventListener("click", (evento) => {
   const sacar = evento.target.closest("[data-sacar]");
   const id = (bajar || subir || sacar)?.dataset.bajar || (subir || sacar)?.dataset.subir || sacar?.dataset.sacar;
   if (!id || !pedido.has(id)) return;
+  const previo = habiaMensaje();
   if (sacar) pedido.delete(id);
   if (bajar) {
     const siguiente = pedido.get(id) - 1;
@@ -218,6 +230,7 @@ pedidoLineas.addEventListener("click", (evento) => {
   if (subir) pedido.set(id, limitarCantidad(pedido.get(id) + 1));
   guardarPedido();
   pintarPedido();
+  avisarSiCambio(previo);
 });
 
 pedidoNota.addEventListener("input", () => {

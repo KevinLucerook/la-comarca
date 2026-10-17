@@ -936,6 +936,38 @@ a:focus-visible {
     0 0 28px 10px rgba(255, 220, 150, 0.38);
 }
 
+.luces-prado {
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.luces-prado span {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff8dc 0%, #e2b340 42%, transparent 72%);
+  box-shadow: 0 0 18px 7px rgba(226, 179, 64, 0.55);
+  opacity: 0.35;
+  animation: fuego-prado 26s ease-in-out infinite;
+}
+
+.luces-prado span:nth-child(odd) {
+  background: radial-gradient(circle, #f7ffe8 0%, #8fbf6a 46%, transparent 72%);
+  box-shadow: 0 0 18px 7px rgba(120, 168, 78, 0.42);
+}
+
+.luces-prado span:nth-child(1) { left: 8%; top: 72%; animation-duration: 24s; }
+.luces-prado span:nth-child(2) { left: 22%; top: 38%; animation-duration: 31s; animation-delay: -8s; }
+.luces-prado span:nth-child(3) { left: 46%; top: 64%; animation-duration: 28s; animation-delay: -14s; }
+.luces-prado span:nth-child(4) { left: 63%; top: 28%; animation-duration: 34s; animation-delay: -4s; }
+.luces-prado span:nth-child(5) { left: 78%; top: 58%; animation-duration: 27s; animation-delay: -18s; }
+.luces-prado span:nth-child(6) { left: 88%; top: 22%; animation-duration: 30s; animation-delay: -11s; }
+.luces-prado span:nth-child(7) { left: 34%; top: 16%; animation-duration: 36s; animation-delay: -21s; width: 0.5rem; height: 0.5rem; }
+
 .estrella-fugaz {
   position: absolute;
   top: 14%;
@@ -1181,6 +1213,12 @@ textarea:focus {
   50% {
     background-position: 80% 60%;
   }
+}
+
+@keyframes fuego-prado {
+  0%, 100% { transform: translate3d(0, 8vh, 0) scale(0.75); opacity: 0.2; }
+  35% { transform: translate3d(7vw, -16vh, 0) scale(1.2); opacity: 0.85; }
+  68% { transform: translate3d(-5vw, -6vh, 0) scale(0.9); opacity: 0.4; }
 }
 
 @keyframes fugaz {
@@ -1548,7 +1586,8 @@ textarea:focus {
   .nubes,
   .rayos,
   .brillo-colina,
-  .fondo-vivo {
+  .fondo-vivo,
+  .luces-prado {
     display: none;
   }
 

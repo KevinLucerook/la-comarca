@@ -6,7 +6,7 @@
     <title>La Comarca Impresiones | Impresión 3D en Córdoba</title>
     <meta
       name="description"
-      content="La Comarca Impresiones: taller de impresión 3D en Córdoba. Figuras, llaveros, juguetes, una tienda con precios y encargos a medida. Pedidos por Instagram."
+      content="La Comarca Impresiones: taller de impresión 3D en Córdoba. Figuras, llaveros, juguetes y piezas a medida. Escribinos por Instagram."
     />
     <meta name="theme-color" content="#3f2918" />
     <meta property="og:title" content="La Comarca Impresiones" />
@@ -47,6 +47,9 @@
   </head>
   <body>
     <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div class="luces-prado" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
 
     <header class="site-header">
       <div class="header-inner">
@@ -64,10 +67,9 @@
         <nav id="nav-principal" class="site-nav" aria-label="Principal">
           <a href="#taller">El taller</a>
           <a href="#piezas">Las piezas</a>
-          <a href="tienda.html">La tienda</a>
           <a href="#sendero">El sendero</a>
           <a href="#posada">La posada</a>
-          <a class="nav-cta" href="https://ig.me/m/lacomarca.impresiones" target="_blank" rel="noopener">Pedir por Instagram</a>
+          <a class="nav-cta" href="https://ig.me/m/lacomarca.impresiones" target="_blank" rel="noopener">Escribinos por Instagram</a>
         </nav>
       </div>
       <div class="sendero-luz" aria-hidden="true">
@@ -99,7 +101,7 @@
             </p>
             <div class="hero-actions">
               <a class="button" href="https://ig.me/m/lacomarca.impresiones" target="_blank" rel="noopener">Escribinos por Instagram</a>
-              <a class="button button-ghost" href="tienda.html">Ver la tienda</a>
+              <a class="button button-ghost" href="#piezas">Ver las piezas</a>
             </div>
           </div>
           <div class="hero-mark reveal">
@@ -151,13 +153,11 @@
               <p>Donde la pieza toma forma, color y tamaño.</p>
             </li>
             <li>
-              <a class="place-link" href="tienda.html">
-                <span class="place-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48"><rect x="12" y="18" width="24" height="14" rx="2" fill="none" stroke="#f6f0e4" stroke-width="2.4"/><path d="M16 18v-4h16v4" fill="none" stroke="#f6f0e4" stroke-width="2.4"/></svg>
-                </span>
-                <h2>El mercado</h2>
-                <p>Entrar a la tienda, con las piezas y sus precios.</p>
-              </a>
+              <span class="place-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M8 30c6-8 10-2 16-8s8 0 16-6" fill="none" stroke="#b6d98a" stroke-width="2.4" stroke-linecap="round"/><circle cx="18" cy="20" r="2" fill="#f2c14e"/><circle cx="30" cy="16" r="1.6" fill="#fff6d0"/></svg>
+              </span>
+              <h2>El prado</h2>
+              <p>Colinas verdes, luz tibia y el silencio del valle.</p>
             </li>
             <li>
               <span class="place-icon" aria-hidden="true">
@@ -178,13 +178,12 @@
             <p>
               La Comarca es un taller de impresión 3D en Córdoba. El nombre es el
               de un valle: colinas verdes, un sendero y una puerta redonda. Ahí
-              se encargan figuras, souvenirs, juguetes y objetos útiles que
-              todavía no están en ningún estante.
+              se hacen figuras, souvenirs, juguetes y objetos útiles, de a una
+              pieza por vez.
             </p>
             <p>
-              En la tienda hay piezas con precio. Lo que no está en el estante
-              se conversa por mensaje directo y sale hecho para esa persona,
-              esa fiesta o esa marca.
+              Cada trabajo se conversa por mensaje directo y sale hecho para
+              esa persona, esa fiesta o esa marca.
             </p>
           </article>
         </div>
@@ -278,8 +277,8 @@
               <p>Se definen tamaño, colores y cantidad para que la pieza quede como se imaginó.</p>
             </li>
             <li>
-              <h3>El presupuesto</h3>
-              <p>Las piezas de la tienda ya tienen precio. Un encargo a medida se cotiza aparte.</p>
+              <h3>La charla</h3>
+              <p>Por Instagram se conversa el trabajo, antes de que la pieza entre al taller.</p>
             </li>
             <li>
               <h3>La entrega</h3>
@@ -287,31 +286,11 @@
             </li>
           </ol>
 
-          <form class="order reveal" id="form-pedido">
-            <h3>Dejá el encargo escrito</h3>
-            <p>El texto se copia y se abre Instagram para pegarlo en el chat.</p>
-            <div class="fields">
-              <label>
-                Nombre
-                <input name="nombre" type="text" autocomplete="name" maxlength="80" />
-              </label>
-              <label>
-                Cantidad
-                <input name="cantidad" type="text" inputmode="numeric" maxlength="20" placeholder="1" />
-              </label>
-              <label class="full">
-                Qué hay que imprimir
-                <input name="idea" type="text" required maxlength="160" placeholder="Un llavero, una figura, un soporte..." />
-              </label>
-              <label class="full">
-                Colores y detalles
-                <textarea name="detalles" rows="4" maxlength="500" placeholder="Medidas, colores, si es un regalo, para qué evento..."></textarea>
-              </label>
-            </div>
-            <button class="button" type="submit">Copiar mensaje y abrir Instagram</button>
-            <p class="form-status" id="form-status" role="status"></p>
-            <textarea class="message-preview" id="message-preview" hidden readonly></textarea>
-          </form>
+          <div class="order reveal">
+            <h3>El camino empieza en Instagram</h3>
+            <p>Escribinos por mensaje directo. Ahí se conversa la idea, el tamaño y el color.</p>
+            <a class="button" href="https://ig.me/m/lacomarca.impresiones" target="_blank" rel="noopener">Escribinos por Instagram</a>
+          </div>
         </div>
       </section>
 
@@ -327,8 +306,8 @@
             <p class="eyebrow eyebrow-light">La posada</p>
             <h2>La puerta sigue abierta</h2>
             <p>
-              Los encargos entran por mensaje directo. Si preferís mirar el
-              camino antes de escribir, el perfil tiene el trabajo reciente.
+              Escribinos por mensaje directo. Si preferís mirar el camino
+              antes de escribir, el perfil tiene el trabajo reciente.
             </p>
           </div>
           <ul class="contact-list">

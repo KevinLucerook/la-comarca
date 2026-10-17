@@ -25,17 +25,14 @@
   <body>
     <main>
       <h1>Este sendero no sigue</h1>
-      <p>La página no está. El valle sigue en la entrada o en la tienda.</p>
+      <p>La página no está. El valle sigue en la entrada.</p>
       <p>
         <a id="volver-entrada" href="index.html">Volver a la entrada</a>
-        ·
-        <a id="volver-tienda" href="tienda.html">Ir a la tienda</a>
       </p>
     </main>
     <script>
       const base = location.pathname.includes("/la-comarca/") ? "/la-comarca/" : "/";
       document.querySelector("#volver-entrada").href = base;
-      document.querySelector("#volver-tienda").href = base + "tienda.html";
     </script>
   </body>
 </html>
